@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import {BsGithub} from "react-icons/bs"
+import {BsGithub} from "react-icons/bs";
 import { contactImg } from "../../assets/index";
 
 const ContactLeft = () => {

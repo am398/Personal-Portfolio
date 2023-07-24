@@ -26,20 +26,20 @@ export const featuresData = [
     id: 2,
     icon: Anveshika,
     title: "National Anveshika Experimental Skill Test",
-    des: "https://drive.google.com/file/d/1C1fAKHaGVl_VzjlXqi4hNAm0Eg6HWunj/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1C1fAKHaGVl_VzjlXqi4hNAm0Eg6HWunj/view?usp=sharing",
   },
   {
     id: 2,
     icon: vvm,
     title: "Vidyarthi Vidyan Manthan (VVM )",
-    des: "https://drive.google.com/file/d/1pwcitEORcTlXBoJoKarxvAeDBbvQq3kH/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1pwcitEORcTlXBoJoKarxvAeDBbvQq3kH/view?usp=sharing",
   },
   
   {
     id: 3,
     icon: convocation,
     title: "Convocation 2022",
-    des: "https://drive.google.com/file/d/1C5h_IJ2d-9c4AzQS0UO0-fx9uXMvdLTc/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1C5h_IJ2d-9c4AzQS0UO0-fx9uXMvdLTc/view?usp=sharing",
   },
   {
     id: 4,
@@ -93,7 +93,7 @@ export const featuresData = [
     id: 11,
     icon: consumer,
     title: "Quizz on Consumer Protection Act",
-    des: "https://drive.google.com/file/d/1HPCRVlfqNBMOAcX8Ktq8UJ2rUi6Obof4/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1HPCRVlfqNBMOAcX8Ktq8UJ2rUi6Obof4/view?usp=sharing",
   },
   {
     id: 12,

@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
 import { logo } from "../../assets/index"
 import { navLinksdata } from '../../constants';
 
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div className="p-10 flex">
-        <img className='rounded-full border-primary border-double' src={logo} alt="logo" />
+        <img className='rounded-full border-primary border-double object-contain' src={logo} alt="logo" />
         <div className='flex flex-col justify-center ml-4'>
           <h1 className='text-m font-bold'>Welcome</h1>
         </div>
@@ -76,15 +77,18 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                  <span className="bannerIcon">
+                  <a href="https://www.instagram.com/anujmaurya.5/">
                     <FaInstagram />
+                  </a>
+                  <span>
+                    <a href="https://github.com/am398">
+                      <BsGithub />
+                    </a>
                   </span>
-                  <span className="bannerIcon">
-                    <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
+                  <a href="https://www.linkedin.com/in/anuj-maurya-1b6b16227/">
+                    {" "}
                     <FaLinkedinIn />
-                  </span>
+                  </a>
                 </div>
               </div>
               <span

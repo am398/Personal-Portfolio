@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 import { useRef } from 'react';
@@ -10,22 +10,22 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_jngtq5q','template_x6gs7zr', form.current, 'QB75NGOX8_0yaAiA_')
+    emailjs.sendForm('service_jngtq5q', 'template_x6gs7zr', form.current, 'QB75NGOX8_0yaAiA_')
       .then((result) => {
         setSuccessMsg(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-      e.targer.reset();
+    setSuccessMsg(
+      `Thank you dear ${username}, Your Messages has been sent Successfully!`
+    );
+    setErrMsg("");
+    setUsername("");
+    setPhoneNumber("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+    e.targer.reset();
   };
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -59,14 +59,13 @@ const Contact = () => {
       setErrMsg("Message is required!");
     } else {
     }
-    try{
+    try {
       sendEmail(e);
     }
-    catch(e)
-    {
+    catch (e) {
       console.log(e);
     }
-    
+
   };
   return (
     <section
@@ -100,10 +99,9 @@ const Contact = () => {
                     name="name"
                     onChange={(e) => setUsername(e.target.value)}
                     value={username}
-                    className={`${
-                      errMsg === "Username is required!" &&
+                    className={`${errMsg === "Username is required!" &&
                       "outline-designColor"
-                    } contactInput`}
+                      } contactInput`}
                     type="text"
                   />
                 </div>
@@ -115,10 +113,9 @@ const Contact = () => {
                     name="phone"
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     value={phoneNumber}
-                    className={`${
-                      errMsg === "Phone number is required!" &&
+                    className={`${errMsg === "Phone number is required!" &&
                       "outline-designColor"
-                    } contactInput`}
+                      } contactInput`}
                     type="text"
                   />
                 </div>
@@ -128,13 +125,12 @@ const Contact = () => {
                   Email
                 </p>
                 <input
-                name="email"
+                  name="email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  className={`${
-                    errMsg === "Please give your Email!" &&
+                  className={`${errMsg === "Please give your Email!" &&
                     "outline-designColor"
-                  } contactInput`}
+                    } contactInput`}
                   type="email"
                 />
               </div>
@@ -143,13 +139,12 @@ const Contact = () => {
                   Subject
                 </p>
                 <input
-                name="subject"
+                  name="subject"
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
-                  className={`${
-                    errMsg === "Plese give your Subject!" &&
+                  className={`${errMsg === "Plese give your Subject!" &&
                     "outline-designColor"
-                  } contactInput`}
+                    } contactInput`}
                   type="text"
                 />
               </div>
@@ -158,12 +153,11 @@ const Contact = () => {
                   Message
                 </p>
                 <textarea
-                name="message"
+                  name="message"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
-                  className={`${
-                    errMsg === "Message is required!" && "outline-designColor"
-                  } contactTextArea`}
+                  className={`${errMsg === "Message is required!" && "outline-designColor"
+                    } contactTextArea`}
                   cols="30"
                   rows="8"
                 ></textarea>
@@ -176,7 +170,7 @@ const Contact = () => {
                   Send Message
                 </button>
               </div>
-              
+
               {errMsg && (
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
