@@ -2,7 +2,6 @@ import React from "react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { PiDownloadSimpleDuotone } from "react-icons/pi";
 import { BsGithub } from "react-icons/bs";
-import CV from "../../assets/CV.pdf";
 const Media = () => {
   return (
     <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
@@ -30,11 +29,11 @@ const Media = () => {
       </div>
       <div flex justify-center>
         <h2 className="text-base uppercase font-titleFont mb-4">
-          Download My CV
+          View My Resume
         </h2>
         <div flex justify-center>
           <span className="bannerIcon">
-            <a href={CV} download>
+            <a href="https://drive.google.com/file/d/12G1ZIzEOP2ooqbdr1mhMHLShqkfSnpDF/view?usp=sharing">
               <PiDownloadSimpleDuotone className="bannerIcon" />
             </a>
           </span>
